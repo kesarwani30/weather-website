@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,35 @@
     <title>Weather</title>
     <link rel="icon" href="/public/image/weather.png">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-image: url("image/back.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
 
 </head>
+
 <body>
-    <div class="main-content">
-        {{>header}}
-        <p>Use this site to get your weather!</p>
+    <div>
+        <div class="main-content">
+            {{>header}}
 
-        <form >
-            <input type="text" placeholder="Enter Location ">
-            <button>Search</button>
-        </form>
-        <p id="message-1"></p>
-        <p id="message-2"></p>
+            <p>Use this site to get your weather!</p>
+
+            <form>
+                <input type="text" placeholder="Enter Location ">
+                <button>Search</button>
+            </form>
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+        </div>
+
+        {{>footer}}
     </div>
-    
-    {{>footer}}
-
-        <script src="js/java.js"></script>
+    <script src="js/java.js"></script>
 </body>
+
 </html>
